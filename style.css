@@ -52,7 +52,8 @@ nav{
     padding-block: 8px;
 }
 .company-logo img {
-    width: 120px;
+    width: 2.5rem;
+    height: 2.5rem;
 
 }
 .nav-links ul{

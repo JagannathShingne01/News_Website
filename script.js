@@ -17,6 +17,7 @@ function bindData(articles){
 
     cardsContainer.innerHTML = "";
     
+  
     articles.forEach((article) => {
         if(!article.urlToImage) return;
         const cardClone = newsCardTemplate.content.cloneNode(true);
@@ -53,15 +54,16 @@ function onNavItemClick(id){
     curSelectedNav.classList.add('active');
 }
 
-const searchButton = document.getElementById('search-button');
-const searchText = document.getElementById('search-text');
 
+document.addEventListener("DOMContentLoaded", () => {
+    const searchText = document.getElementById("search-text");
+  const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click",()=>{
     const query = searchText.value;
     if(!query)return;
     fetchNews(query);
     curSelectedNav?.classList.remove("active");
     curSelectedNav = null;
+})
 });
 
-//https://newsapi.org/v2/everything?q=tesla&from=2023-07-05&sortBy=publishedAt&apiKey=2ca8249b60f44884a71d9d19f49c32b3
