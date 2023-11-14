@@ -25,6 +25,7 @@ function bindData(articles){
         cardsContainer.appendChild(cardClone);
     });
 }
+
 function fillDataInCard(cardClone, article){
     const newsImg = cardClone.querySelector("#news-img")
     const newsTitle = cardClone.querySelector("#news-title")
@@ -53,7 +54,6 @@ function onNavItemClick(id){
     curSelectedNav = navItem;
     curSelectedNav.classList.add('active');
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const searchText = document.getElementById("search-text");
